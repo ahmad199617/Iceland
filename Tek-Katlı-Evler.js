@@ -40,11 +40,6 @@
     "./images/37.png"]
 
 
-        
-        
-
-
-
     
     
     lod()
@@ -129,10 +124,17 @@
                     img37 = new Image();
                     img37.src = "./images/37.png";
                     
-                }else{console.log("xx");}
+                }
                 
 
             }
+            
+
+
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -292,30 +294,30 @@ function setSpeed (){
     
 }
 
-var numperx = 0
-function start3D (){
-if(stop==false){
-    
-if( numperx < 37 ){
-    
-document.querySelector(".D3D-SCALL").value= numperx
-    
-var imgxx = document.querySelector(".M-3D-IMG");
+    var numperx = 0
+    function start3D (){
+    if(stop==false){
+        
+    if( numperx < 37 ){
+        
+    document.querySelector(".D3D-SCALL").value= numperx
+        
+    var imgxx = document.querySelector(".M-3D-IMG");
 
-var myvarx = imgs.at(numperx);
-    
-imgxx.style.content='url('+ myvarx +')'
-    
-numperx ++
-    
-        }else {numperx = 1}
-    
-         setTimeout(start3D, 500);}
-    
-     }
+    var myvarx = imgs.at(numperx);
+        
+    imgxx.style.content='url('+ myvarx +')'
+        
+    numperx ++
+        
+            }else {numperx = 1}
+        
+            setTimeout(start3D, 500);}
+        
+        }
 
 
 
-       start3D ()
+        start3D ()
 
 
