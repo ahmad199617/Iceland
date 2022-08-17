@@ -1488,7 +1488,9 @@
 
                                 @media only screen and (max-width: 1000px) {
                                     .M-3D-IMGX{
-                                        position: relative;}
+                                        position: relative;
+                                        width: 1px;
+                                    }
                                 
                                     .M-3D-div {
                                         height: auto; 
