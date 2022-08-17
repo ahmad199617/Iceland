@@ -1480,12 +1480,16 @@
                                 
                                 .M-3D-IMG{
                                 
-                                    transition: all 0.1s;
-                                    
-                                            
-                                }
+                                    transition: all 0.1s;}
+
+                                
+                                    /* ****************3D phone**********************/
+
 
                                 @media only screen and (max-width: 1000px) {
+                                    .M-3D-IMGX{
+                                        position: relative;
+                                        width: 1%;}
                                 
                                     .M-3D-div {
                                         height: auto; 
