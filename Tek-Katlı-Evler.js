@@ -38,6 +38,14 @@
     "./images/35.png", 
     "./images/36.png",
     "./images/37.png"]
+
+
+        
+        
+
+
+
+    
     
     lod()
 
@@ -120,7 +128,11 @@
                     img36.src = "./images/36.png";
                     img37 = new Image();
                     img37.src = "./images/37.png";
-                }}
+                    
+                }else{console.log("xx");}
+                
+
+            }
 
 
 document.addEventListener("DOMContentLoaded", function(){
