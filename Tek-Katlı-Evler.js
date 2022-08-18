@@ -324,16 +324,28 @@ var stop = false
 
 
 
+                var imgList = document.images;
+                var len = imgList.length;
+                var imgCounter = 0;
+              
+                [].forEach.call(imgList, function (img) {
+                  if (img.complete) {
+                    incrementImgCounter();
+                  }
+                  else {
+                    img.addEventListener('load', incrementImgCounter, false);
+                  }
+                });
+              
+                function incrementImgCounter() {
+                  imgCounter++;
+                  if (imgCounter === len) {
+                    document.querySelector(".M-3D-IMGX").style.opacity = "0%";
+                    document.querySelector(".D3D-SCALL").style.opacity = "100%";
+                    lod()
+                    setTimeout(start3D, 1000)
+                    numperx = 0
+       
+                  }
+                }
 
-
-
-
-        Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
-             document.querySelector(".M-3D-IMGX").style.opacity = "0%";
-             document.querySelector(".D3D-SCALL").style.opacity = "100%";
-             lod()
-             setTimeout(start3D, 1000)
-             numperx = 0
-
-
-        });
