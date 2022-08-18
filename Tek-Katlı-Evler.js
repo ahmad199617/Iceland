@@ -331,7 +331,8 @@ var stop = false
         Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
              document.querySelector(".M-3D-IMGX").style.opacity = "0%";
              document.querySelector(".D3D-SCALL").style.opacity = "100%";
-             start3D ()
+             lod()
+             setTimeout(start3D, 1000)
              numperx = 0
 
 
