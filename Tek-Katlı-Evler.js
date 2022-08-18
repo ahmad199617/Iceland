@@ -343,9 +343,35 @@ var stop = false
                     document.querySelector(".M-3D-IMGX").style.opacity = "0%";
                     document.querySelector(".D3D-SCALL").style.opacity = "100%";
                     lod()
-                    setTimeout(start3D, 1000)
+                    setTimeout(start3D, 3000)
                     numperx = 0
        
                   }
+                  lod()
+                  numperx ++
+                  start3Dx ()
+
                 }
+
+
+                function start3Dx (){
+                    if(stop==false){
+                        
+                    if( numperx < 37 ){
+                        
+                    document.querySelector(".D3D-SCALL").value= numperx
+                        
+                    var imgxx = document.querySelector(".M-3D-IMG");
+        
+                    var myvarx = imgs.at(numperx);
+                        
+                    imgxx.style.content='url('+ myvarx +')'
+                        
+                    numperx ++
+                        
+                            }else {numperx = 1}
+                        
+                            }
+                        
+                        }
 
