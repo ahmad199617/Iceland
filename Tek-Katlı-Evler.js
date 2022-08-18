@@ -279,61 +279,60 @@ var stop = false
 
 
 
-function setSpeed (){
-    stop = true
+            function setSpeed (){
+                stop = true
 
-    var imgNumpar = document.querySelector(".D3D-SCALL").value;
-    
-    imgNumpar-=1
-    
-    var imgxx = document.querySelector(".M-3D-IMG");
-    
-    var myvar = imgs.at(imgNumpar);
-    
-    imgxx.style.content='url('+ myvar +')'
+                var imgNumpar = document.querySelector(".D3D-SCALL").value;
+                
+                imgNumpar-=1
+                
+                var imgxx = document.querySelector(".M-3D-IMG");
+                
+                var myvar = imgs.at(imgNumpar);
+                
+                imgxx.style.content='url('+ myvar +')'
 
-    
-    
+                
+                
 
-    
-    
-}
-
-    var numperx = 0
-    function start3D (){
-    if(stop==false){
-        
-    if( numperx < 37 ){
-        
-    document.querySelector(".D3D-SCALL").value= numperx
-        
-    var imgxx = document.querySelector(".M-3D-IMG");
-
-    var myvarx = imgs.at(numperx);
-        
-    imgxx.style.content='url('+ myvarx +')'
-        
-    numperx ++
-        
-            }else {numperx = 1}
-        
-            setTimeout(start3D, 500);}
-        
-        }
+                
+                
+            }
 
 
+            var numperx = 0
+            function start3D (){
+            if(stop==false){
+                
+            if( numperx < 37 ){
+                
+            document.querySelector(".D3D-SCALL").value= numperx
+                
+            var imgxx = document.querySelector(".M-3D-IMG");
 
-        start3D ()
+            var myvarx = imgs.at(numperx);
+                
+            imgxx.style.content='url('+ myvarx +')'
+                
+            numperx ++
+                
+                    }else {numperx = 1}
+                
+                    setTimeout(start3D, 500);}
+                
+                }
 
 
 
 
-    
-    
+
+
 
         Promise.all(Array.from(document.images).filter(img => !img.complete).map(img => new Promise(resolve => { img.onload = img.onerror = resolve; }))).then(() => {
              document.querySelector(".M-3D-IMGX").style.opacity = "0%";
              document.querySelector(".D3D-SCALL").style.opacity = "100%";
+             start3D ()
+             numperx = 0
 
 
         });
