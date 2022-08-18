@@ -332,8 +332,7 @@ var stop = false
                 window.addEventListener('load', function () {
                     document.querySelector(".M-3D-IMGX").style.opacity = "0%";
                     document.querySelector(".D3D-SCALL").style.opacity = "100%";
-                    lod()
-                    setTimeout(start3D, 3000)
+                    start3D() 
                     numperx = 0
                   })
 
