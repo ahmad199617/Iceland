@@ -745,7 +745,6 @@
                             }
                             .Producer-div-img-div{
                                 width: 100%;
-                                overflow:hidden;
                             }
                             .Producer-div-img-img{
                                 transition: all 0.2s;
@@ -1126,7 +1125,7 @@
                             
                             .backgrund-black{
                                 background-color: black;
-                                opacity: 60%;
+                                opacity: 80%;
                                 position: absolute;
                                 width: 100%;
                                 height: 100%;
@@ -1490,7 +1489,38 @@
                                 
                                 .M-3D-IMG{
                                 
+
                                     transition: all 0.1s;}
+                                    .D3D-SCALL {
+                                        -webkit-appearance: none;
+                                        width: 100%;
+                                        height: 20px;
+                                        background: #5e7aa3;
+                                        outline: none;
+                                        z-index: 1;
+                                        position: relative;
+                                        transition: all 0.2s;
+                
+                                      }
+                                      
+                                      .D3D-SCALL:hover {
+                                        background: #1A4990;
+                                      }
+                                      
+                                      .D3D-SCALL::-webkit-slider-thumb {
+                                        -webkit-appearance: none;
+                                        appearance: none;
+                                        width: 60px;
+                                        height: 30px;
+                                        background-image: url(./images/left-right.png);
+                                        background-size: contain;
+                                        background-position: center;
+                                        border-radius: 20px;
+                                        background-color: #ffffff;
+                                        background-repeat: no-repeat;
+                                        box-shadow: 0px 0px 10px #000000;
+                                        cursor: pointer;
+                                      }
 
                                 
                                     /* ****************3D phone**********************/
